@@ -101,8 +101,3 @@ The `environments/` directory contains environment-specific configurations. For 
 - AWS CLI configured on your local machine.
 - AN IDE with the Terraform extension installed.
 
-1. **Clone the Repository:**
-
-   git clone https://github.com/yourusername/my-terraform-project.git
-   cd my-terraform-project
-
