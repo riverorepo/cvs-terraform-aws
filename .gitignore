@@ -1,0 +1,34 @@
+# Terraform directories and files
+.terraform/                   # Terraform working directory, plugins, etc.
+*.tfstate                     # Terraform state files
+*.tfstate.*                   # Backup state files (e.g., *.tfstate.backup)
+.terraform.lock.hcl           # Terraform dependency lock file (optional, if you want to ignore it)
+
+# Local override files (if you use them for local development)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform variable files (often contain sensitive data)
+*.tfvars
+*.tfvars.json
+
+# Crash log files (generated if Terraform crashes)
+crash.log
+
+# Sensitive files (customize as needed)
+*.pem                        # Private keys
+*.key                        # Other secret keys
+*.crt                        # Certificates
+
+# IDE and Editor folders (if using VSCode, IntelliJ, etc.)
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store                    # macOS
+Thumbs.db                    # Windows
+
+# Logs and temporary files
+*.log

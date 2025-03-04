@@ -1,0 +1,20 @@
+module "ecs_fargate" {
+  source               = "../../modules/ecs_fargate"
+  cluster_name         = "staging-ecs-cluster"
+  task_family          = "staging-app"
+  cpu                  = "256"
+  memory               = "512"
+  container_name       = "staging-app-container"
+  image_url            = var.image_url
+  container_port       = 80
+  log_group            = var.ecs_log_group
+  aws_region           = var.aws_region
+  desired_count        = 1
+  private_subnet_ids   = module.vpc.private_subnet_ids
+  security_group_ids   = [var.ecs_security_group_id]
+  target_group_arn     = var.target_group_arn
+  service_name         = "staging-ecs-service"
+  max_capacity         = 2
+  min_capacity         = 1
+  cpu_target_value     = 50
+}
