@@ -10,9 +10,3 @@ resource "aws_s3_bucket" "log_bucket" {
     }
   }
 }
-
-resource "aws_s3_bucket_logging" "bucket_logging" {
-  bucket        = aws_s3_bucket.secure_bucket.id
-  target_bucket = aws_s3_bucket.log_bucket.id
-  target_prefix = "logs/"
-}
